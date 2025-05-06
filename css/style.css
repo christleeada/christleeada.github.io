@@ -27,24 +27,30 @@ body {
   opacity: 0;
   animation: fadeIn 0.5s ease-in forwards;
   line-height: 1.6;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 @keyframes fadeIn {
   to { opacity: 1; }
 }
 
-/* Animated Background */
+/* Improved Animated Background */
 .animated-bg {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(-45deg, #2D4356, #435B66, #6C9BCF, #A5C0DD);
+  background: linear-gradient(-45deg, 
+    #2D4356, 
+    #3A4F5F,
+    #5A8BC5,
+    #B3D1F2
+  );
   background-size: 400% 400%;
-  animation: gradientBG 15s ease infinite;
+  animation: gradientBG 25s ease infinite;
   z-index: -2;
-  opacity: 0.9;
+  opacity: 0.85;
 }
 
 @keyframes gradientBG {
@@ -52,11 +58,11 @@ body {
   50% { background-position: 100% 50%; }
 }
 
-/* Glassmorphism Navigation */
+/* Enhanced Glassmorphism Navigation */
 .glass-nav {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  background: rgba(45, 67, 86, 0.7);
+  background: rgba(45, 67, 86, 0.85);
   border-bottom: 1px solid rgba(248, 249, 250, 0.1);
   padding: 1rem 2rem;
   position: fixed;
@@ -77,6 +83,7 @@ body {
   font-weight: 700;
   color: var(--light);
   text-decoration: none;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .logo span {
@@ -95,6 +102,7 @@ body {
   font-weight: 500;
   transition: all 0.3s ease;
   position: relative;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .nav-links a:hover {
@@ -136,7 +144,7 @@ body {
   }
 }
 
-/* Hero Section */
+/* Hero Section with Better Contrast */
 .hero {
   min-height: 100vh;
   display: flex;
@@ -148,7 +156,11 @@ body {
 
 .hero-content {
   flex: 1;
-  padding-right: 2rem;
+  padding: 2rem;
+  background: rgba(245, 247, 250, 0.15);
+  backdrop-filter: blur(5px);
+  border-radius: 15px;
+  margin-right: 2rem;
 }
 
 .text-gradient {
@@ -159,6 +171,7 @@ body {
   font-size: 3.5rem;
   line-height: 1.2;
   margin-bottom: 1rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .hero-content span {
@@ -175,6 +188,7 @@ body {
   font-size: 1.5rem;
   margin-bottom: 2rem;
   color: var(--text-secondary);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .hero-btns {
@@ -182,7 +196,7 @@ body {
   gap: 1rem;
 }
 
-/* Buttons */
+/* Enhanced Buttons */
 .btn-primary, .btn-secondary {
   padding: 0.8rem 1.5rem;
   border-radius: 50px;
@@ -190,12 +204,15 @@ body {
   transition: all 0.3s ease;
   text-decoration: none;
   margin-top: 50px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px);
 }
 
 .btn-primary {
-  background: var(--primary);
+  background: rgba(108, 155, 207, 0.9);
   color: var(--light);
   box-shadow: 0 10px 20px rgba(108, 155, 207, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 .btn-primary:hover {
@@ -207,6 +224,7 @@ body {
 .btn-secondary {
   border: 2px solid var(--primary);
   color: var(--primary);
+  background: rgba(255, 255, 255, 0.15);
   margin-top: auto;
   align-self: flex-start;
   padding: 0.5rem 1.2rem;
@@ -247,6 +265,7 @@ body {
   color: var(--text-secondary);
   font-size: 1.5rem;
   transition: all 0.3s ease;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .social-links a:hover {
@@ -270,6 +289,7 @@ body {
   margin-bottom: 3rem;
   color: var(--text-primary);
   position: relative;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .section-title::after {
@@ -320,6 +340,7 @@ body {
   padding: 0.3rem 0.8rem;
   border-radius: 50px;
   font-size: 0.9rem;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
 }
 
 /* Projects Grid */
@@ -379,6 +400,7 @@ body {
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
   color: var(--light);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .project-info p {
@@ -433,6 +455,7 @@ body {
   background: rgba(245, 247, 250, 0.1);
   color: var(--light);
   font-family: 'Poppins', sans-serif;
+  backdrop-filter: blur(5px);
 }
 
 .contact-form input::placeholder,
@@ -454,6 +477,7 @@ body {
   border-radius: 50px;
   cursor: pointer;
   transition: all 0.3s ease;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .submit-btn:hover {
@@ -467,6 +491,7 @@ body {
   padding: 2rem;
   color: var(--text-secondary);
   font-size: 0.9rem;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 }
 
 /* Responsive Adjustments */
@@ -484,6 +509,7 @@ body {
   .hero-content {
     padding-right: 0;
     margin-bottom: 3rem;
+    margin-right: 0;
   }
 
   .hero-btns {
