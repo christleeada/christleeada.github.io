@@ -1,21 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Same head as index.html -->
+  {% include includes/head.html %}
+  <title>Your Name | Projects</title>
 </head>
 <body>
-    <nav><!-- Copy navigation from index.html --></nav>
+  <div class="animated-bg"></div>
+  {% include includes/navbar.html %}
 
-    <main>
-        <h2>My Projects</h2>
-        <div class="project-card">
-            <h3>Project 1</h3>
-            <p>A brief description of your project.</p>
-            <a href="#">View Project</a>
+  <section class="page-section">
+    <div class="container">
+      <h1 class="text-gradient">My Projects</h1>
+      
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card glass-card">
+          <img src="/images/project1.jpg" alt="Project 1">
+          <div class="project-info">
+            <h3>E-Commerce Website</h3>
+            <p>Built with React and Node.js</p>
+            <a href="#" class="btn-primary">View Live</a>
+          </div>
         </div>
-        <!-- Repeat for other projects -->
-    </main>
 
-    <footer><!-- Copy footer from index.html --></footer>
+        <!-- Project 2 -->
+        <div class="project-card glass-card">
+          <img src="/images/project2.jpg" alt="Project 2">
+          <div class="project-info">
+            <h3>Portfolio Template</h3>
+            <p>Pure HTML/CSS with animations</p>
+            <a href="#" class="btn-secondary">Code</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {% include includes/social-links.html %}
 </body>
 </html>
