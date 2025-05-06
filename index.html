@@ -7,42 +7,29 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <style>
-        /* Additional inline styles for the background image layout */
+        /* Simple solid background */
         body {
-            margin: 0;
-            padding: 0;
-            min-height: 100vh;
+    background: url('/images/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    color: #F5F7FA;
+}
+        
+        /* Remove animated background elements */
+        .animated-bg {
+            display: none;
         }
         
-        .fullpage-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('/images/background.jpg'); /* Replace with your image path */
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            z-index: -3;
-        }
-        
-        .bg-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(45, 67, 86, 0.7); /* Dark overlay for better text contrast */
-            z-index: -2;
-        }
-        
+        /* Center hero content */
         .hero {
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
             padding: 0 2rem;
+            min-height: 100vh;
         }
         
         .hero-content {
@@ -50,19 +37,13 @@
             margin: 0 auto;
         }
         
+        /* Remove photo container */
         .hero-image {
-            display: none; /* Hide the photo container */
+            display: none;
         }
     </style>
 </head>
 <body>
-    <!-- Full page background image -->
-    <div class="fullpage-bg"></div>
-    <div class="bg-overlay"></div>
-    
-    <!-- Animated gradient background (optional, can remove if not needed) -->
-    <div class="animated-bg"></div>
-
     <!-- Navigation -->
     <nav class="glass-nav">
         <div class="nav-container">
@@ -84,7 +65,7 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1 class="text-gradient">Hi, I'm Christ Lee Ada<span></span></h1>
+            <h1 class="text-gradient">Hi, I'm Christ Lee Ada</h1>
             <p class="subtitle">Web & App Developer</p>
             <div class="hero-btns">
                 <a href="projects.html" class="btn-primary">View Work</a>
@@ -101,7 +82,7 @@
     </div>
 
     <script>
-        // Mobile menu toggle functionality
+        // Mobile menu toggle
         const hamburger = document.querySelector('.hamburger');
         const navLinks = document.querySelector('.nav-links');
         
