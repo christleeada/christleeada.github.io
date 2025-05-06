@@ -1,10 +1,10 @@
 :root {
-  --primary: #6C9BCF;       /* Soft blue */
-  --secondary: #A5C0DD;     /* Light blue */
-  --dark: #2D4356;         /* Dark navy */
-  --light: #F5F7FA;         /* Off-white */
-  --accent: #EAB2A0;        /* Peach accent */
-  --glass: rgba(245, 247, 250, 0.1);
+    --primary: #6C9BCF;       /* Soft blue */
+    --secondary: #A5C0DD;     /* Light blue */
+    --dark: #2D4356;         /* Dark navy */
+    --light: #F5F7FA;         /* Off-white */
+    --accent: #EAB2A0;        /* Peach accent */
+    --glass: rgba(245, 247, 250, 0.1);
 }
 
 * {
@@ -60,8 +60,8 @@ body {
 .glass-nav {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  background: rgba(0, 0, 0, 0.85);
-  border-bottom: 1px solid rgba(85, 85, 85, 0.1);
+  background: rgba(45, 67, 86, 0.85);
+  border-bottom: 1px solid rgba(248, 249, 250, 0.1);
   padding: 1rem 2rem;
   position: fixed;
   width: 100%;
