@@ -57,13 +57,9 @@ body {
 }
 
 .glass-nav {
-  background: rgba(45, 67, 86, 0.9); /* Slightly transparent dark navy */
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(248, 249, 250, 0.1);
-  padding: 1rem 2rem;
-  position: fixed;
-  width: 100%;
-  z-index: 100;
+  background: linear-gradient(145deg, #1a1a1a, #2e2e2e); /* metallic black gradient */
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
 .nav-container {
@@ -75,11 +71,7 @@ body {
 }
 
 .logo {
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: var(--light);
-  text-decoration: none;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  color: #fff;
 }
 
 .logo span {
@@ -93,17 +85,13 @@ body {
 }
 
 .nav-links a {
-  color: var(--light);
-  text-decoration: none;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  position: relative;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  color: #fff;
 }
 
 .nav-links a:hover {
-  color: var(--accent);
+  color: var(--accent); /* or use white if preferred */
 }
+
 
 .nav-links a::after {
   content: '';
@@ -190,14 +178,9 @@ body {
 
 /* Enhanced Buttons */
 .btn-primary, .btn-secondary {
-  padding: 0.8rem 1.5rem;
-  border-radius: 50px;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  text-decoration: none;
-  margin-top: 50px;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(5px);
+  background: linear-gradient(145deg, #1a1a1a, #2e2e2e);
+  color: #fff;
+  border: 1px solid #444;
 }
 
 .btn-primary {
@@ -210,24 +193,10 @@ body {
   transition: all 0.3s ease;
 }
 
-.btn-primary:hover {
-  background: #5a8bc5; /* Slightly darker blue */
+.btn-primary:hover, .btn-secondary:hover {
+  background: linear-gradient(145deg, #000000, #1a1a1a);
   transform: translateY(-2px);
-}
-
-.btn-secondary {
-  border: 2px solid var(--primary);
-  color: var(--primary);
-  padding: 0.8rem 1.5rem;
-  border-radius: 50px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.btn-secondary:hover {
-  background: var(--primary);
-  color: var(--light);
+  color: #fff;
 }
 /* Hero Image */
 .hero-image {
