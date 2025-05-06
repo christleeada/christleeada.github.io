@@ -6,6 +6,48 @@
   <title>Christ Lee | Projects</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* Additional CSS to make project info fit better */
+    .project-card {
+      display: flex;
+      flex-direction: column;
+      height: 100%; /* Make all cards equal height */
+    }
+    
+    .project-card img {
+      height: 180px;
+      object-fit: cover;
+      width: 100%;
+    }
+    
+    .project-info {
+      padding: 15px;
+      flex-grow: 1; /* Allow info section to grow and fill space */
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .project-info p {
+      margin: 8px 0;
+      font-size: 0.9rem;
+      line-height: 1.4;
+      flex-grow: 1; /* Allow description to take available space */
+    }
+    
+    .project-info h3 {
+      margin-bottom: 5px;
+      font-size: 1.1rem;
+    }
+    
+    .btn-secondary {
+      margin-top: 10px;
+      align-self: flex-start; /* Align button to left */
+    }
+    
+    .projects-grid {
+      grid-gap: 20px; /* Add some spacing between cards */
+    }
+  </style>
 </head>
 <body>
   <div class="animated-bg"></div>
@@ -37,28 +79,49 @@
           <img src="/images/project1.jpg" alt="Project 1">
           <div class="project-info">
             <h3>Asset Management Website</h3>
-            <p>Built with Laravel</p>
-            <a href="#" class="btn-primary">Source Code</a>
+            <p><strong>Built with Laravel</strong></p>
+            <p>Web app that stores university asset information and provides access via QR code stickers.</p>
+            <a href="https://github.com/christleeada/assets_management.git" class="btn-secondary">Source</a>
           </div>
         </div>
 
-    
         <div class="project-card glass-card">
           <img src="/images/project2.jpg" alt="Project 2">
           <div class="project-info">
             <h3>Scoring App for Events</h3>
-            <p>Built using React-Native and Xcode</p>
-            <a href="#" class="btn-secondary">Source Code</a>
+            <p><strong>Built with React-Native and Xcode</strong></p>
+            <p>App used by judges to score event contestants.</p>
+            <a href="https://github.com/christleeada/scoringapp.git" class="btn-secondary">Source</a>
           </div>
         </div>
 
-       
         <div class="project-card glass-card">
           <img src="/images/project3.jpg" alt="Project 3">
           <div class="project-info">
-            <h3>POS for FU Cafeterias</h3>
-            <p>Built using React-Native and Xcode</p>
-            <a href="#" class="btn-secondary">Source Code</a>
+            <h3>Civitas 360</h3>
+            <p><strong>Built with React-Native and Xcode</strong></p>
+            <p>Foundation University's e-books platform including yearbooks as part of paperless transition.</p>
+            <a href="#" class="btn-secondary">Source</a>
+          </div>
+        </div>
+
+        <div class="project-card glass-card">
+          <img src="/images/project4.jpg" alt="Project 4">
+          <div class="project-info">
+            <h3>Queuing App</h3>
+            <p><strong>Built with React-Native and Xcode</strong></p>
+            <p>Students get priority numbers and select services from Business/Finance or Admissions offices.</p>
+            <a href="https://github.com/christleeada/queuingapp" class="btn-secondary">Source</a>
+          </div>
+        </div>
+
+        <div class="project-card glass-card">
+          <img src="/images/project5.jpg" alt="Project 5">
+          <div class="project-info">
+            <h3>Visitor App</h3>
+            <p><strong>Built with React-Native and Xcode</strong></p>
+            <p>Generates visitor badges with name, company and purpose. Logs are sent to API for security.</p>
+            <a href="https://github.com/christleeada/queuingapp" class="btn-secondary">Source</a>
           </div>
         </div>
       </div>
