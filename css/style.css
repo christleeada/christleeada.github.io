@@ -1,10 +1,10 @@
 /* Modern CSS Reset */
 :root {
-    --primary: #4b4b4b;
+    --primary: #1e2a47; /* Darker blue tone for a tech feel */
     --secondary: #ffffff;
-    --dark: #2d3436;
-    --light: #f5f6fa;
-    --glass: rgba(255, 255, 255, 0.1);
+    --dark: #121212; /* Dark background color */
+    --light: #f1f1f1; /* Light, almost white for contrast */
+    --glass: rgba(255, 255, 255, 0.2); /* Slightly transparent white */
 }
 
 * {
@@ -14,9 +14,9 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #0066ff 0%, #c3cfe2 100%);
-    color: var(--dark);
+    font-family: 'Roboto', sans-serif; /* Modern sans-serif font */
+    background: linear-gradient(135deg, #0d0f20, #1e2a47); /* Darker gradient with a tech vibe */
+    color: var(--light); /* Light text on a dark background */
     overflow-x: hidden;
 }
 
@@ -27,7 +27,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background: linear-gradient(-45deg, #00c6ff, #0072ff, #6a1b9a, #d500f9); /* Futuristic neon colors */
     background-size: 400% 400%;
     animation: gradientBG 15s ease infinite;
     z-index: -2;
@@ -61,7 +61,7 @@ body {
 }
 
 .logo {
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: 700;
     color: var(--light);
     text-decoration: none;
@@ -237,190 +237,7 @@ body {
         height: 300px;
     }
 }
-/* Shared Page Styles */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-  }
-  
-  .page-section {
-    padding: 8rem 0;
-  }
-  
-  /* Glass Cards */
-  .glass-card {
-    background: var(--glass);
-    backdrop-filter: blur(10px);
-    border-radius: 15px;
-    padding: 2rem;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-  }
-  
-  /* About Grid */
-  .about-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 3rem;
-  }
-  
-  .skills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-  }
-  
-  .skills span {
-    background: var(--primary);
-    color: white;
-    padding: 0.3rem 0.8rem;
-    border-radius: 50px;
-    font-size: 0.9rem;
-  }
-  
-  /* Projects Grid */
-  .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: 2rem;
-    margin-top: 3rem;
-  }
-  
-  .project-card img {
-    width: 100%;
-    border-radius: 10px 10px 0 0;
-    height: 200px;
-    object-fit: cover;
-  }
-  
-  .project-info {
-    padding: 1.5rem;
-  }
-  
-  /* Contact Form */
-  .contact-form {
-    max-width: 600px;
-    margin: 3rem auto 0;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-  
-  .contact-form input,
-  .contact-form textarea {
-    padding: 1rem;
-    border: none;
-    border-radius: 8px;
-    background: rgba(255, 255, 255, 0.1);
-    color: white;
-  }
-  
-  .contact-form input::placeholder,
-  .contact-form textarea::placeholder {
-    color: rgba(255, 255, 255, 0.7);
-  }
-  /* Page Transition */
-body {
-    opacity: 0;
-    animation: fadeIn 0.5s ease-in forwards;
-  }
-  
-  @keyframes fadeIn {
-    to { opacity: 1; }
-  }
-  /* Mobile menu styles */
-@media (max-width: 768px) {
-    .nav-links {
-        position: fixed;
-        top: 70px;
-        left: -100%;
-        width: 100%;
-        height: calc(100vh - 70px);
-        background: rgba(44, 62, 80, 0.9);
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        transition: left 0.3s ease;
-    }
-    
-    .nav-links.active {
-        left: 0;
-    }
-    
-    .hamburger.active .line:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-    }
-    
-    .hamburger.active .line:nth-child(2) {
-        opacity: 0;
-    }
-    
-    .hamburger.active .line:nth-child(3) {
-        transform: rotate(-45deg) translate(5px, -5px);
-    }
-}
+
 html {
     scroll-behavior: smooth;
 }
-/* Container for all project cards */
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px; /* Add spacing between cards */
-    margin-top: 30px;
-  }
-  
-  /* Styling for each project card */
-  .project-card {
-    position: relative;
-    background-color: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    transition: transform 0.3s ease;
-    height: 350px; /* Increased height for each card */
-    padding: 20px;
-  }
-  
-  .project-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 10px;
-  }
-  
-  .project-info {
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%; /* Ensure the text and button stay within the card */
-  }
-  
-  .project-info h3 {
-    font-size: 1.25rem;
-    margin-bottom: 10px;
-  }
-  
-  .project-info p {
-    font-size: 1rem;
-    margin-bottom: 15px;
-  }
-  
-  .project-info a {
-    align-self: flex-start;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: auto; /* Push button to the bottom */
-    display: inline-block;
-    transition: background-color 0.3s ease;
-  }
-  
-  .project-info a:hover {
-    background-color: #0056b3;
-  }
-  
