@@ -8,29 +8,40 @@
   <link rel="stylesheet" href="css/style.css" />
   <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
   <style>
-     
     body {
-background: url('/images/background.jpg') no-repeat center center fixed;
-background-size: cover;
-margin: 0;
-padding: 0;
-min-height: 100vh;
-color: #F5F7FA;
-}
-    
-  
-    .animated-bg {
-        display: none;
+      background: url('/images/background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      color: #F5F7FA;
+      font-family: Arial, sans-serif;
     }
-    
-  
-   
-</style>
 
+    input::placeholder,
+    textarea::placeholder {
+      color: #ccc; 
+    }
+
+    .social-links {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .social-links a {
+      color: #F5F7FA;
+      font-size: 24px;
+      transition: color 0.3s;
+    }
+
+    .social-links a:hover {
+      color: #1DA1F2;
+    }
+  </style>
 </head>
 <body>
-  
-
   <nav class="glass-nav">
     <div class="nav-container">
       <a href="index.html" class="logo">Christ Lee</a>
@@ -39,8 +50,8 @@ color: #F5F7FA;
         <span class="line"></span>
         <span class="line"></span>
       </div>
-      
       <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="projects.html">Projects</a></li>
         <li><a href="contact.html">Contact</a></li>
@@ -58,13 +69,16 @@ color: #F5F7FA;
         <textarea name="message" placeholder="Message" rows="5" required></textarea>
         <button type="submit" class="btn-primary">Send Message</button>
       </form>
+
+      
+      <div class="social-links">
+        <a href="https://github.com/christleeada" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://facebook.com/kitleeada" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://instragram.com/kitleeada" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
     </div>
   </section>
 
-  <script>
-    
-
-  </script>
   <script src="/js/script.js"></script>
 </body>
 </html>
