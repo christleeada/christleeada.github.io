@@ -44,25 +44,19 @@
     </style>
 </head>
 <body>
-    <!-- Navigation -->
     <nav class="glass-nav">
         <div class="nav-container">
-            <a href="index.html" class="logo">Christ Lee</a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <div class="hamburger">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-            </div>
+          <a href="#" class="logo">Christ Lee</a>
+          <button class="menu-toggle">☰</button>
+          <ul class="nav-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
         </div>
-    </nav>
+      </nav>
 
-    <!-- Hero Section -->
+
     <section id="home" class="hero">
         <div class="hero-content">
             <h1 class="text-gradient">Hi, I'm Christ Lee Ada</h1>
@@ -74,22 +68,13 @@
         </div>
     </section>
 
-    <!-- Social Links -->
+   
     <div class="social-links">
         <a href="https://github.com/christleeada"><i class="fab fa-github"></i></a>
         <a href="https://facebook.com/kitleeada"><i class="fab fa-facebook"></i></a>
         <a href="https://instragram.com/kitleeada"><i class="fab fa-instagram"></i></a>
     </div>
 
-    <script>
-        // Mobile menu toggle
-        const hamburger = document.querySelector('.hamburger');
-        const navLinks = document.querySelector('.nav-links');
-        
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            hamburger.classList.toggle('active');
-        });
-    </script>
+    <script src="/js/script.js"></script>
 </body>
 </html>
