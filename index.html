@@ -1,86 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Christ Lee | Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <style>
-     
-        body {
-    background: url('/images/background.jpg') no-repeat center center fixed;
-    background-size: cover;
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    color: #F5F7FA;
-}
-        
-      
-        .animated-bg {
-            display: none;
-        }
-        
-      
-        .hero {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 0 2rem;
-            min-height: 100vh;
-        }
-        
-        .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-     
-        .hero-image {
-            display: none;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GoHighLevel Specialist – Portfolio</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;scroll-behavior:smooth;}
+    body{color:#0a0a0a;line-height:1.6;background:#ffffff;}
+    header{position:fixed;top:0;left:0;width:100%;background:#ffffffcc;backdrop-filter:blur(6px);border-bottom:1px solid #eee;z-index:999;padding:0.5rem 2rem;display:flex;justify-content:space-between;align-items:center;}
+    header nav a{margin-left:1.25rem;font-weight:600;text-decoration:none;color:#0a0a0a;transition:color .2s ease-in-out;}
+    header nav a:hover{color:#ff7a00;}
+    .section{padding:6rem 2rem 4rem;max-width:1000px;margin:0 auto;}
+    .hero{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;text-align:center;}
+    .hero h1{font-size:clamp(2.25rem,6vw,3.5rem);font-weight:700;margin-bottom:1rem;}
+    .hero p{font-size:1.1rem;max-width:600px;margin-bottom:2rem;}
+    .btn{display:inline-block;padding:0.8rem 1.8rem;border-radius:50px;background:#ff7a00;color:#fff;font-weight:600;text-decoration:none;transition:opacity .2s ease-in-out;}
+    .btn:hover{opacity:.85;}
+    .grid{display:grid;gap:2rem;}
+    .grid-2{grid-template-columns:repeat(auto-fit,minmax(260px,1fr));}
+    .card{background:#fafafa;border:1px solid #eee;border-radius:12px;padding:1.5rem;transition:transform .2s ease-in-out,box-shadow .2s ease-in-out;}
+    .card:hover{transform:translateY(-4px);box-shadow:0 8px 24px -6px rgba(0,0,0,.08);}
+    .testimonial{font-style:italic;position:relative;padding-left:2rem;}
+    .testimonial:before{content:"\201C";position:absolute;left:0;top:-10px;font-size:3rem;color:#ff7a00;}
+    .footer{background:#0a0a0a;color:#fff;text-align:center;padding:2rem;}
+    .footer a{color:#ff7a00;text-decoration:none;}
+    @media (max-width:600px){header nav a{margin-left:0.75rem;}}
+  </style>
 </head>
 <body>
-    <nav class="glass-nav">
-        <div class="nav-container">
-            <a href="index.html" class="logo">Christ Lee</a>
-            <div class="hamburger">
-                <span class="line"></span>
-                <span class="line"></span>
-                <span class="line"></span>
-              </div>
-              
-          <ul class="nav-links">
-            
-            <li><a href="about.html">About</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
+  <header>
+    <a href="#" style="font-weight:700;font-size:1.25rem;">GHL&nbsp;Specialist</a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
+  <section class="section hero" id="home">
+    <h1>Hi, I'm <span style="color:#ff7a00;">Your Name</span></h1>
+    <p>GoHighLevel Funnel & Automation Expert helping coaches, agencies, and businesses grow with streamlined systems and smart marketing automation.</p>
+    <a href="#contact" class="btn">Book a Free Call</a>
+  </section>
 
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1 class="text-gradient">Hi, I'm Christ Lee Ada</h1>
-            <p class="subtitle">Web & App Developer</p>
-            <div class="hero-btns">
-                <a href="projects.html" class="btn-primary">View Work</a>
-                <a href="contact.html" class="btn-secondary">Contact Me</a>
-            </div>
-        </div>
-    </section>
+  <section class="section" id="about">
+    <h2 style="font-size:2rem;font-weight:700;margin-bottom:1rem;">About Me</h2>
+    <p>I specialize in building scalable systems with GoHighLevel — from landing pages and workflows to full CRM pipelines and agency white‑label builds. With <strong>4+ years experience</strong>, I bridge marketing strategy with seamless automation to help you work less and earn more.</p>
+  </section>
 
-   
-    <div class="social-links">
-        <a href="https://github.com/christleeada"><i class="fab fa-github"></i></a>
-        <a href="https://facebook.com/kitleeada"><i class="fab fa-facebook"></i></a>
-        <a href="https://instagram.com/kitleeada"><i class="fab fa-instagram"></i></a>
+  <section class="section" id="services">
+    <h2 style="font-size:2rem;font-weight:700;margin-bottom:1rem;">Services</h2>
+    <div class="grid grid-2">
+      <div class="card">
+        <h3>Funnels & Pages</h3>
+        <ul>
+          <li>Sales & Lead Gen Funnels</li>
+          <li>Booking / Calendar Pages</li>
+          <li>Membership Areas</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>CRM & Automation</h3>
+        <ul>
+          <li>Lead Nurturing Workflows</li>
+          <li>Email & SMS Campaigns</li>
+          <li>Pipeline Management</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>White Label Setup</h3>
+        <ul>
+          <li>Custom Domain & Branding</li>
+          <li>Snapshot Importing</li>
+          <li>SaaS Mode Configuration</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Integrations & Support</h3>
+        <ul>
+          <li>Zapier / Make Hooks</li>
+          <li>Twilio / Mailgun Setup</li>
+          <li>API Troubleshooting</li>
+        </ul>
+      </div>
     </div>
+  </section>
 
-    <script src="/js/script.js"></script>
+  <section class="section" id="projects">
+    <h2 style="font-size:2rem;font-weight:700;margin-bottom:1rem;">Featured Projects</h2>
+    <div class="grid grid-2">
+      <div class="card">
+        <h3>Fitness Funnel 🚀</h3>
+        <p>Generated <strong>120+ leads</strong> in 2 weeks with FB Ad integration and automated nurture workflows.</p>
+      </div>
+      <div class="card">
+        <h3>Dental CRM 🦷</h3>
+        <p>Implemented booking system & reminders, reducing no‑shows by <strong>35%</strong>.</p>
+      </div>
+      <div class="card">
+        <h3>Agency SaaS 🌐</h3>
+        <p>Full white‑label GoHighLevel build with custom branding & snapshot deployment.</p>
+      </div>
+      <div class="card">
+        <h3>E‑com Retargeting 📈</h3>
+        <p>Multi‑channel SMS + email automation, increasing repeat purchases by <strong>18%</strong>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="testimonials">
+    <h2 style="font-size:2rem;font-weight:700;margin-bottom:1rem;">Testimonials</h2>
+    <div class="grid grid-2">
+      <div class="card testimonial">
+        "He built our GHL system from scratch and it’s now bringing in consistent leads every week. Highly recommend!"<br>— <strong>Coach Lisa M.</strong>
+      </div>
+      <div class="card testimonial">
+        "Very reliable and professional. Saved me hours of setup and got everything automated."<br>— <strong>James T., Agency Owner</strong>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <h2 style="font-size:2rem;font-weight:700;margin-bottom:1rem;">Get In Touch</h2>
+    <p>If you're ready to launch or fix your GoHighLevel system, let’s talk.</p>
+    <p><strong>Email:</strong> <a href="mailto:you@example.com">you@example.com</a></p>
+    <p><strong>Schedule a Call:</strong> <a href="https://calendly.com/yourlink" target="_blank">Calendly</a></p>
+  </section>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Your Name – GoHighLevel Specialist. Built with ❤ and hosted on GitHub Pages.</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
