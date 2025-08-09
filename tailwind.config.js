@@ -1,13 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>GoHighLevel Specialist | Growth & Efficiency Funnels</title>
-  <meta name="description" content="Funnel portfolio of a GoHighLevel Specialist helping businesses increase revenue, cut costs, and scale with automation." />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  
-  
+module.exports = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui'] },
+          colors: {
+            brand: {
+              50: '#edfaff',
+              100: '#d7f2ff',
+              200: '#b0e7ff',
+              300: '#78d8ff',
+              400: '#34c6ff',
+              500: '#00aef3',
+              600: '#008bcc',
+              700: '#006aa0',
+              800: '#064c75',
+              900: '#0b3958',
+              950: '#0a2b43'
+            },
+            accent: {
+              400: '#34f5c5',
+              500: '#21e2b2',
+              600: '#15c39a'
+            }
+          },
+          boxShadow: {
+            glow: '0 10px 30px 0 rgba(33, 226, 178, 0.35)',
+            card: '0 10px 25px rgba(0,0,0,0.25)'
+          },
+          backdropBlur: { 12: '12px' }
+        }
+      }
+    }
+  </script>
   <style>
     /* Subtle animated gradient background */
     .bg-orbit {
@@ -48,15 +71,6 @@
       box-shadow: 0 0 0 4px rgba(33,226,178,0.35);
     }
   </style>
-
-  <!-- Preload & Load CSS -->
-  <link rel="preload" href="styles.css" as="style">
-  <link rel="stylesheet" href="styles.css">
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body class="font-sans text-white bg-orbit antialiased selection:bg-accent-500/30 selection:text-white">
   <!-- Mobile sticky CTA -->
@@ -763,7 +777,47 @@
     </div>
   </div>
 
-  
-  <script src="main.js" defer></script>
-</body>
-</html>
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Smooth scroll for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', (e) => {
+        const id = a.getAttribute('href');
+        if (id.length > 1 && document.querySelector(id)) {
+          e.preventDefault();
+          document.querySelector(id).scrollIntoView({ behavior: 'smooth', block: 'start' });
+          // Close mobile menu if open
+          if (window.getComputedStyle(document.getElementById('mobileMenu')).display !== 'none') {
+            toggleMobileMenu(false);
+          }
+        }
+      });
+    });
+
+    // Mobile menu
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    function toggleMobileMenu(force) {
+      const show = typeof force === 'boolean' ? force : mobileMenu.classList.contains('hidden');
+      mobileMenu.classList.toggle('hidden', !show);
+    }
+    if (mobileMenuBtn) mobileMenuBtn.addEventListener('click', () => toggleMobileMenu());
+
+    // Modal controls
+    const modal = document.getElementById('modal');
+    const openers = [
+      document.getElementById('openAudit'),
+      document.getElementById('openAuditMobile'),
+      document.getElementById('heroAudit'),
+      document.getElementById('auditFromRoi'),
+      document.getElementById('contactAudit'),
+      document.getElementById('mobileCta'),
+      ...document.querySelectorAll('.openAuditAny')
+    ].filter(Boolean);
+    const closeBtn = document.getElementById('closeModal');
+    const openModal = () => {
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
